@@ -1,0 +1,29 @@
+//  N O T E
+//  use alert-banner-css.css instead of //dedjtr-caretakecss.css
+//  wl00 26 Feb 2021
+//  cloned to asset 180587 - 3 Dec 2021 2:35pm
+
+/* Added by BH 24 Oct 2022 */
+/* Run the caretaker file */
+
+(function () {
+    var runForSites = [
+        'connection.vic.gov.au',
+        'djpr.vic.gov.au',
+        'earthresources.vic.gov.au',
+        'localgovernment.vic.gov.au',
+        'www.localgovernment.vic.gov.au',
+        'djsir.vic.gov.au',
+        'agriculture.vic.gov.au'
+        ];
+    
+    if(runForSites.includes(window.location.hostname))
+    {
+        var ctkr = document.createElement("script");
+        ctkr.type = "text/javascript";
+        ctkr.defer = true;
+        ctkr.src = "https://web5.economicdevelopment.vic.gov.au/28Oct2022_alert-banner.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ctkr, s);
+    }
+})();
